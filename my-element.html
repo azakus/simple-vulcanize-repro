@@ -1,0 +1,39 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/paper-button/paper-button.html">
+
+<dom-module id="my-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      paper-button {
+        background-color: blue;
+        color: red;
+      }
+    </style>
+    <template is="dom-repeat" items="[[_computeItems(items)]]">
+      <template is="dom-if" if="[[item]]">
+        <paper-button id="button" raised>{{item}}</paper-button>
+      </template>
+    </template>
+  </template>
+  <script>
+    Polymer({
+      is: 'my-element',
+      properties: {
+        items: {
+          type: Number,
+          value: 0,
+        }
+      },
+      _computeItems: function() {
+        var array = new Array(this.items);
+        for (var i = 0; i < this.items; i++) {
+          array.push(i + 1);
+        }
+        return array;
+      }
+    });
+  </script>
+</dom-module>

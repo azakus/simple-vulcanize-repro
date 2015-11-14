@@ -1,0 +1,23 @@
+{
+  "name": "repro",
+  "authors": [
+    "Daniel Freedman <dfreedm@google.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-button": "PolymerElements/paper-button#~1.0.8",
+    "polymer": "polymer/polymer#master",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#0.7.16"
+  }
+}
